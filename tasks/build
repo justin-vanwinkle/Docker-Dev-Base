@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+self=$(readlink -f $0); tasks=`dirname ${self}`; projectRoot=`dirname ${tasks}`;
+docker build -t justinvanwinkle/dev-base:latest -t justinvanwinkle/dev-base:`date +%Y%m%d` -f Dockerfile.dev-base $projectRoot;
+
+
+
